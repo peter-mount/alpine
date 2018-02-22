@@ -16,11 +16,11 @@ node( 'Dev_AMD64_Amsterdam' ) {
     sh 'docker pull area51/alpine:latest'
   }
 
-  image -> stage( 'Build Image' ) {
+  stage( 'Build Image' ) {
     sh 'docker build -t ' + imageName + ':latest .'
   }
 
-  image -> stage( 'Publish Image' ) {
+  stage( 'Publish Image' ) {
     sh 'docker push ' + imageName + ':latest'
   }
 
