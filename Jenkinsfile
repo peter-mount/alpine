@@ -13,7 +13,7 @@ node( 'Dev_AMD64_Amsterdam' ) {
   }
 
   stage( 'Prepare Build' ) {
-    sh 'docker pull area51/alpine:latest'
+    sh 'docker pull alpine:latest'
   }
 
   stage( 'Build Image' ) {
